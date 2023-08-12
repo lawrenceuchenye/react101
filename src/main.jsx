@@ -11,7 +11,11 @@ import ReactDom from "react-dom";
 };*/
 
 const Hello = () => {
-  return React.createElement("h1", {}, "hello world");
+  return React.createElement(
+    "div",
+    {},
+    React.createElement("h1", {}, "hello world")
+  );
 };
 
 //react dom
