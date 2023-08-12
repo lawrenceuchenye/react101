@@ -1,12 +1,18 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-const Hello = () => {
+//react conponents nust be uppercase
+/*const Hello = () => {
   return (
     <div>
       <h1>Hello world! Vreactie</h1>
     </div>
   );
+};*/
+
+const Hello = () => {
+  return React.createElement("h1", {}, "hello world");
 };
 
-ReactDom.render(<Hello />, document.getElementById(("root")));
+//react dom
+ReactDom.render(<Hello />, document.getElementById("root"));
