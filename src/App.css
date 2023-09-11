@@ -3,14 +3,19 @@
   font-family: "Phudu", cursive;
 }
 
+.main-container {
+  text-align: center;
+  padding: 30px 10px;
+}
+
 .btn {
   background: #0d80ea;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 13px;
+  border-radius: 3px;
   color: #fff;
   font-family: "Pudu";
   border: none;
-  font-size: 32px;
+  font-size: 25px;
   text-transform: capitalize;
   outline: none;
   margin-top: 20px;

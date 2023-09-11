@@ -2,17 +2,16 @@ import "./App.css";
 import { useState } from "react";
 
 const App = () => {
-  let [text, setText] = useState("text");
-  console.log(useState("bread"));
+  let [count, setCounter] = useState(0);
 
-  const changeText = () => {
-    setText("Hello twitter");
+  const addCounter = () => {
+    setCounter(count + 1);
   };
 
   return (
-    <div>
-      <h1>{text}</h1>
-      <button className="btn" onClick={() => changeText()}>
+    <div className="main-container">
+      <h1>Counter: {count}</h1>
+      <button className="btn" onClick={() => addCounter()}>
         Click me!
       </button>
     </div>
