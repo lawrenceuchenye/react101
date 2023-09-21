@@ -3,23 +3,31 @@ import { useState, useEffect } from "react";
 
 const App = () => {
   const [count, setCounter] = useState(0);
-  const [clicked, setClicked] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const addCounter = () => {
     setCounter(count + 1);
   };
 
   useEffect(() => {
-    addCounter();
-  }, [clicked]);
+    if (window.innerWidth <= 750) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div className="main-container">
+        <h1>Mobile</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="main-container">
-      <h1>useEffect hook :{count}</h1>
-      <h2>{clicked ? "Clicked" : "UnClicked"}</h2>
-      <button className="btn" onClick={() => setClicked(!clicked)}>
-        Tap
-      </button>
+      <h1>Desktop</h1>
     </div>
   );
 };
