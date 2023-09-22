@@ -12,4 +12,7 @@
   padding: 5px;
   outline: none;
   font-family: "Pudu";
+  margin: 0px 3px;
+  border-radius: 3px;
+  border: solid 2px grey;
 }
