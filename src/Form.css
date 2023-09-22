@@ -1,0 +1,15 @@
+.main-form-container {
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.input-container {
+  margin: 15px auto;
+}
+
+.input-container input {
+  padding: 5px;
+  outline: none;
+  font-family: "Pudu";
+}
