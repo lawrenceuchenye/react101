@@ -4,14 +4,11 @@ import "./Form.css";
 import { useState, useRef } from "react";
 
 const Form = () => {
-  const [name, setName] = useState("coder");
-  const [password, setPassword] = useState("password");
-
   const ref = useRef(null);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    alert("hello");
+    alert(ref);
   };
 
   return (
