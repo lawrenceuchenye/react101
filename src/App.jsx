@@ -5,10 +5,12 @@ import { useState, useRef } from "react";
 
 const Form = () => {
   const ref = useRef(null);
+  const container = useRef(null);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    alert(ref);
+    console.log(ref);
+    console.log(container);
   };
 
   return (
@@ -16,11 +18,15 @@ const Form = () => {
       <form className="form-container" onSubmit={(e) => onSubmit(e)}>
         <div className="input-container">
           <label>Name:</label>
-          <input type="text" placeholder="Username" ref={ref} />
+          <input type="text" placeholder="Username" />
         </div>
         <div className="input-container">
           <label>Password:</label>
           <input type="password" placeholder="Password" />
+        </div>
+        <div ref={container}>
+          <label>Developer</label>
+          <input ref={ref} type="checkbox" />
         </div>
         <button type="submit" className="btn-container">
           Login
