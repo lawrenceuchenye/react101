@@ -1,45 +1,19 @@
 import "./App.css";
-import "./Form.css";
+//import "./Form.css";
 
-import { useState, useRef } from "react";
+import { useState, useReducer } from "react";
 
-const Form = () => {
-  const ref = useRef(null);
-  const container = useRef(null);
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log(ref);
-    console.log(container);
-  };
-
-  return (
-    <div className="main-form-container">
-      <form className="form-container" onSubmit={(e) => onSubmit(e)}>
-        <div className="input-container">
-          <label>Name:</label>
-          <input type="text" placeholder="Username" />
-        </div>
-        <div className="input-container">
-          <label>Password:</label>
-          <input type="password" placeholder="Password" />
-        </div>
-        <div ref={container}>
-          <label>Developer</label>
-          <input ref={ref} type="checkbox" />
-        </div>
-        <button type="submit" className="btn-container">
-          Login
-        </button>
-      </form>
-    </div>
-  );
+const defaultState = {
+  NAME: "CODER",
+  PLATFORM: "TWIITER",
 };
+const reducer = (state, action) => { };
 
 const App = () => {
+  const [state, Dispatch] = useReducer(reducer, defaultState);
   return (
     <div className="main-container">
-      <Form />
+      <h1>useReducers</h1>
     </div>
   );
 };
