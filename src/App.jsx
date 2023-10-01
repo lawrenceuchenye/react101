@@ -37,9 +37,20 @@ const Buttons = () => {
 };
 const App = () => {
   return (
-    <ValueContext.Provider value="Ello">    <div className="main-container">
-      <Buttons />
-    </div>
+    <ValueContext.Provider value="Ello">
+      <div className="main-container">
+        <Buttons />
+        <ValueContext.Consumer>
+          {value => {
+            return (
+              <div>
+                <h1>Value:{value}</h1>
+              </div>
+            )
+
+          }}
+        </ValueContext.Consumer>
+      </div>
     </ValueContext.Provider>
 
   );
