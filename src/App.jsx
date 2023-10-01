@@ -1,7 +1,9 @@
 import "./App.css";
 //import "./Form.css";
 
-import { useState, useReducer } from "react";
+import { useContext, useState, useReducer }, React from "react";
+
+const ValueContext = React.createContext();
 
 const Display = ({ val }) => {
   return (
@@ -22,7 +24,7 @@ const Buttons = () => {
       <div>
         <Display val={val} />
       </div>
-      <div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <button className="btn" onClick={() => setValue(val + 1)}>
           +
         </button>
@@ -35,9 +37,11 @@ const Buttons = () => {
 };
 const App = () => {
   return (
-    <div className="main-container">
+    <ValueContext.Provider value="Ello">    <div className="main-container">
       <Buttons />
     </div>
+    </ValueContext.Provider>
+
   );
 };
 
