@@ -4,12 +4,14 @@ import { useFetch } from "./Hooks/";
 const url = "github.com/user/repo/main/db.json";
 
 const App = () => {
-  const [isLoading, Data] = useFetch(url);
-  console.log(Data);
+  const { loading, data } = useFetch(url);
+  console.log(data);
 
   return (
     <div className="main-container">
-      <div>{isLoading ? "laoding..." : "loaded"}</div>
+      <div>
+        <h1>{isLoading ? "laoding..." : "loaded"}</h1>
+      </div>
     </div>
   );
 };
