@@ -41,7 +41,7 @@ const App = () => {
       <div className="main-container">
         <Buttons />
         <ValueContext.Consumer>
-          {value => {
+          {(value) => {
             return (
               <div>
                 <h1>Value:{value}</h1>
