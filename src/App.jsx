@@ -1,13 +1,15 @@
 import "./App.css";
-//import "./Form.css";
+import { useFetch } from "./Hooks/";
 
-import { useContext, useState, useReducer } from "react";
-import React from "react";
+const url = "github.com/user/repo/main/db.json";
 
 const App = () => {
+  const [isLoading, Data] = useFetch(url);
+  console.log(Data);
+
   return (
     <div className="main-container">
-      <div></div>
+      <div>{isLoading ? "laoding..." : "loaded"}</div>
     </div>
   );
 };
