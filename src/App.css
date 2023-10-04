@@ -20,3 +20,16 @@
   outline: none;
   margin-top: 20px;
 }
+
+.nb-container {
+  display: "flex";
+  justify-content: "space-between";
+  align-items: "center";
+}
+
+.nb-container span {
+  width: auto;
+  margin: 0px 15px;
+  text-transform: "uppercase";
+  text-decoration: none;
+}
