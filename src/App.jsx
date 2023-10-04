@@ -1,6 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+//pages
+import Home from "./Pages/home";
+import About from "./Pages/about";
+import Contact from "./Pages/contact";
+
 const App = () => {
   return (
     <Router>
@@ -18,6 +23,11 @@ const App = () => {
         </div>
         <h1>React Router</h1>
       </div>
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/contact" element={<About />}></Route>
+        <Route exact path="/about" element={<Contact />}></Route>
+      </Routes>
     </Router>
   );
 };

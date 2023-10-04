@@ -1,6 +1,6 @@
 const about = () => {
   return (
-    <div>
+    <div style={{ margin: "auto auto" }}>
       <h1>About Page</h1>
     </div>
   );
